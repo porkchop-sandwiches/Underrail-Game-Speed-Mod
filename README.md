@@ -11,6 +11,10 @@ Increases the amount by which the game speeds up when you press the speed up key
 ## Usage
 In order for this mod to work you need to run the game by executing BepInEx.NET.Framework.Launcher.exe so mod can be loaded.
 
+### Configuration
+
+You can configure the mod (speed multiplier) in BepInEx/config/SpeedUp.cfg file.
+
 ## Troubleshooting
 
 In case you get error when executing BepInEx launcher, move BepInEx/core/SemanticVersioning.dll to the Underrail root folder where launcher is located.
