@@ -5,7 +5,6 @@ namespace GameplayChanges.Configurations
 {
     public sealed class Configuration
     {
-
         private Configuration() {}
 
         public static volatile Configuration instance;
@@ -23,10 +22,7 @@ namespace GameplayChanges.Configurations
         public Configuration(ConfigFile _config)
         {
             config = _config;
-
             speed_multiplier = config.Bind("Constants", "speed_multiplier", 3, "Multiplies game speed increase by it's value");
         }
-
     }
-
 }
