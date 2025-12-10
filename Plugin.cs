@@ -20,12 +20,10 @@ public class Plugin : BasePlugin
         {
             var d52 = Traverse.Create(__instance).Field("c").GetValue();
             var speedMultiplierField = Traverse.Create(d52).Field("a");
-
             
             speedMultiplierField.SetValue(0.25 * Configuration.getInstance().speed_multiplier.Value);            
         }
     }
-
 
     public override void Load()
     {
