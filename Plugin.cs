@@ -11,15 +11,15 @@ namespace GameplayChanges;
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class Plugin : BasePlugin
 {
-    [HarmonyPatch(typeof(c6o))]
-    [HarmonyPatch(nameof(c6o.wm))]
+    [HarmonyPatch(typeof(c58))]
+    [HarmonyPatch(nameof(c58.wx))]
     internal class SpeedPatch
     {
         [HarmonyPostfix]
         public static void Postfix(c60 __instance)
         {
-            var d52 = Traverse.Create(__instance).Field("c").GetValue();
-            var speedMultiplierField = Traverse.Create(d52).Field("a");
+            var d5y = Traverse.Create(__instance).Field("c").GetValue();
+            var speedMultiplierField = Traverse.Create(d5y).Field("a");
             
             speedMultiplierField.SetValue(0.25 * Configuration.getInstance().speed_multiplier.Value);            
         }
