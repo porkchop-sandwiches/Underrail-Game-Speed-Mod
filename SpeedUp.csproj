@@ -1,31 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
     <AssemblyName>SpeedUp</AssemblyName>
-    <Description>Game speed mode</Description>
-    <Version>0.1.0</Version>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>https://api.nuget.org/v3/index.json;https://nuget.bepinex.dev/v3/index.json;https://nuget.samboy.dev/v3/index.json</RestoreAdditionalProjectSources>
-    <RootNamespace>GameplayChanges</RootNamespace>
-    <BaseOutputPath>C:\Program Files (x86)\Steam\steamapps\common\Underrail\BepInEx\plugins</BaseOutputPath>
+    <RootNamespace>SpeedUp</RootNamespace>
     <PlatformTarget>x86</PlatformTarget>
     <Platforms>AnyCPU;x86</Platforms>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Configurations>Debug;Release;Release_1.3.0.17</Configurations>
   </PropertyGroup>
 
+  <!-- Latest version build -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release|x86' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|x86'">
+    <TargetName>SpeedUp_1.3.0.17</TargetName>
+    <Description>SpeedUp BepInEx plugin for Underrail 1.3.0.17</Description>
+    <DefineConstants>$(DefineConstants);UNDERRAIL13017</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release|x86' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Reference Include="underrail">
+      <HintPath>C:\ggg\underrail\UnderRail\BepInEx\lib\underrail_1.3.0.17.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- References -->
   <ItemGroup>
     <PackageReference Include="BepInEx.NET.Framework.Launcher" Version="6.0.0-be.*" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
   </ItemGroup>
-
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="underrail">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Underrail\underrail.exe</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>
