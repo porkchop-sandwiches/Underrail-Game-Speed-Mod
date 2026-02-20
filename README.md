@@ -5,6 +5,7 @@ Increases the amount by which the game speeds up when you press the speed up key
 ## Versions
 
 These Underrail versions are currently supported:
+- 1.3.1.0
 - 1.3.0.17
 - 1.3.0.16
 - 1.3.0.15
@@ -32,7 +33,7 @@ You can configure the mod (speed multiplier) in BepInEx/config/SpeedUp.cfg file.
 1. Unzip the BepInEx project to your Underrail install directory.
 1. Place a copy of your underrail.exe file in BepInEx/lib/ directory.  Rename file to include version number at the end such as: underrail_1.3.0.17.exe.
 1. Open Solution.
-1. Choose a Build configuration related to your Underrail version.  Release = latest, or v1.3.0.17, and the rest include version number.
+1. Choose a Build configuration related to your Underrail version.  Release = latest, or v1.3.1.0, and the rest include version number.
 1. Set platform to AnyCPU for ease, only use x86 if you have trouble.
 1. Build solution.
 1. Copy SpeedUp_YOURUNDERRAILVERSION.dll from bin/Release/ or bin/Release_YOURUNDERRAILVERSION/ to your BepInEx/plugin/ directory.
