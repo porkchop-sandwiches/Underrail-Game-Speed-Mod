@@ -15,6 +15,12 @@ WIP on a system to support multiple Underrail versions in a single DLL release.
 WIP adding this project to Github.
 WIP getting Github build actions to run and create even a single DLL of the latest Underrail, or (ideally) create a copy of all supported DLLs.
 
+## [1.2.0] - 2026-02-24
+
+### Changed
+
+Updated SpeedPatch to support Underrail v1.3.1.1.  (Not really necessary as nothing changed)
+
 ## [1.1.0] - 2026-02-19
 
 ### Changed

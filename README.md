@@ -6,9 +6,7 @@ Increases the amount by which the game speeds up when you press the speed up key
 
 These Underrail versions are currently supported:
 - 1.3.1.0
-- 1.3.0.17
-- 1.3.0.16
-- 1.3.0.15
+- 1.3.0.17, 1.3.0.16, 1.3.0.15
 
 Support for v1.2.0.23 could be looked at if someone requested it.
 
