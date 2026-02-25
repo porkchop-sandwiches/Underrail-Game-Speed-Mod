@@ -14,9 +14,11 @@ public class Plugin : BasePlugin
     internal const string underrailVersion = "1.3.0.16";
 #elif UNDERRAIL13017
     internal const string underrailVersion = "1.3.0.17";
+#elif UNDERRAIL1310
+    internal const string underrailVersion = "1.3.1.0";
 #else
     // latest Underrail version
-    internal const string underrailVersion = "1.3.1.0";
+    internal const string underrailVersion = "1.3.1.1";
 #endif
 
     public override void Load()

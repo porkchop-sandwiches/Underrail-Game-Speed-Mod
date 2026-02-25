@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net481</TargetFramework>
     <AssemblyName>SpeedUp</AssemblyName>
-    <Version>1.1.0.0</Version>
+    <Version>1.2.0.0</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
@@ -13,16 +13,28 @@
     <PlatformTarget>x86</PlatformTarget>
     <Platforms>AnyCPU;x86</Platforms>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Configurations>Debug;Release;Release_1.3.0.17</Configurations>
+    <Configurations>Debug;Release;Release_1.3.0.17;Release_1.3.1.0</Configurations>
   </PropertyGroup>
 
   <!-- Latest version build -->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release|x86' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|x86'">
+    <TargetName>SpeedUp_1.3.1.1</TargetName>
+    <Description>SpeedUp BepInEx plugin for Underrail 1.3.1.1</Description>
+    <DefineConstants>$(DefineConstants);UNDERRAIL1311</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release|x86' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Reference Include="underrail">
+      <HintPath>C:\ggg\underrail\UnderRail\BepInEx\lib\underrail_1.3.1.1.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- v1.3.1.0 build, Release only -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_1.3.1.0|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release_1.3.1.0|x86'">
     <TargetName>SpeedUp_1.3.1.0</TargetName>
     <Description>SpeedUp BepInEx plugin for Underrail 1.3.1.0</Description>
     <DefineConstants>$(DefineConstants);UNDERRAIL1310</DefineConstants>
   </PropertyGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release|x86' Or '$(Configuration)|$(Platform)'=='Debug|AnyCPU' Or '$(Configuration)|$(Platform)'=='Debug|x86'">
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release_1.3.1.0|AnyCPU' Or '$(Configuration)|$(Platform)'=='Release_1.3.1.0|x86'">
     <Reference Include="underrail">
       <HintPath>C:\ggg\underrail\UnderRail\BepInEx\lib\underrail_1.3.1.0.exe</HintPath>
     </Reference>
